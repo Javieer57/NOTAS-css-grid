@@ -1,0 +1,35 @@
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+		'header 	header 	header'
+		'aside-1	content aside-2'
+		'aside-1	widget 	aside-2'
+		'footer		footer 	footer';
+}
+
+.contenedor .header {
+	grid-area: header;
+	background-color: rgb(47, 41, 41);
+}
+.contenedor .aside-1 {
+	grid-area: aside-1;
+	background-color: rgb(157, 89, 221);
+}
+.contenedor .aside-2 {
+	grid-area: aside-2;
+	background-color: rgb(157, 89, 221);
+}
+.contenedor .content {
+	grid-area: content;
+	background-color: white;
+	color: #000;
+}
+.contenedor .widget {
+	grid-area: widget;
+	background-color: rgb(214, 214, 93);
+}
+.contenedor .footer {
+	grid-area: footer;
+	background-color: rgb(47, 41, 41);
+}

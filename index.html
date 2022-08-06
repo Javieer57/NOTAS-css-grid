@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+		<link rel="stylesheet" href="estilos.css" />
+		<!-- <link rel="stylesheet" href="grid.css" /> -->
+		<!-- <link rel="stylesheet" href="minmax.css" /> -->
+		<!-- <link rel="stylesheet" href="repeat.css" /> -->
+		<!-- <link rel="stylesheet" href="posicionamiento.css" /> -->
+		<!-- <link rel="stylesheet" href="grid-area.css" /> -->
+		<!-- <link rel="stylesheet" href="alineacion.css" /> -->
+		<!-- <link rel="stylesheet" href="alineacion-track.css" /> -->
+		<!-- <link rel="stylesheet" href="grid-implicita.css" /> -->
+		<link rel="stylesheet" href="auto-fill-fit.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- <div class="header">
+			<p>CSS GRID</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          /* grid-template-columns: 100px 100px 100px; */
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 150px 300px;
+          grid-gap: 20px;
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>CSS minmax()</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: minmax(300px, 1fr) 1fr;
+          grid-template-rows: minmax(100px, auto) minmax(100px, auto);
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div></div>
+			<div></div>
+			<div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, perferendis!</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>repeat()</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: 100px repeat(5, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>Posicionamiento</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+        }
+        
+        .contenedor .item {
+          background-color: rgb(165, 98, 227);
+          
+          /* :: positionamiento normal :: */
+          grid-column-start: 1;
+          grid-column-end: -2;
+          grid-row-start: 2;
+          grid-row-end: 4;
+          
+          /* :: positionamiento shorthands :: */
+          grid-column: 1 / -2;
+          grid-row: 2 / 4;
+          
+          /* :: shorthand de column y row :: */
+          grid-area: 2 / 1 / 4 / -2;
+        
+          /* :: span ::: */
+          grid-column: span 3;
+          grid-row: 2 / span 2;
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div class="item">1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>Grid areas</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-areas:
+            'header 	header 	header'
+            'aside-1	content aside-2'
+            'aside-1	widget 	aside-2'
+            'footer	footer 	footer';
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div class="header">1</div>
+			<div class="aside-1">2</div>
+			<div class="aside-2">3</div>
+			<div class="content">4</div>
+			<div class="widget">5</div>
+			<div class="footer">6</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>Alineación</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 200px);
+        
+          justify-items: center;
+          /* auto | start | center | end | stretch */
+        
+          align-items: center;
+          /* auto | start | center | end | stretch */
+        }
+        
+        .contenedor .item {
+          background-color: rgb(239, 116, 94);
+          justify-self: stretch;
+          /* width: 100%; -- No respeta el gap */
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div class="item">5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>Alineación de Grid/track</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          height: 700px;
+          grid-template-columns: repeat(3, 150px);
+          grid-template-rows: repeat(3, 150px);
+        
+          justify-content: center;
+          /* normal | start | space-between | space-evenly | space-around | end */
+        
+          align-content: center;
+          /* normal | start | space-between | space-evenly | space-around | end */
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div class="item">5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div> -->
+
+		<!-- <div class="header">
+			<p>CSS GRID - Grid Implicita</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: 200px 1fr 200px;
+          grid-template-rows: 200px 100px 200px;
+        
+          grid-auto-columns: 100px;
+          grid-auto-rows: 100px;
+        
+          /* [row|column] dense */
+          grid-auto-flow: row dense;
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div class="span2">2</div>
+			<div>3</div>
+			<div class="span3">4</div>
+			<div class="span2">5</div>
+			<div class="span3">6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div class="span2">14</div>
+			<div>15</div>
+		</div> -->
+
+		<div class="header">
+			<p>CSS GRID - Auto Fill & Fit</p>
+		</div>
+
+		<pre>
+      <code>
+        .contenedor {
+          display: grid;
+          grid-gap: 20px;
+        
+          /* Auto fill busca rellena todo el espacio con las columnas que existen */
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        
+          /* Auto fill llena con más columnas (incluso vacías) si caben (tomando el tamaño mínimo) */
+          /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+        }
+      </code>
+    </pre>
+
+		<div class="contenedor">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>3</div>
+		</div>
+	</body>
+</html>

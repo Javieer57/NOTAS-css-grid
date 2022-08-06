@@ -1,0 +1,10 @@
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+
+	/* Auto fill busca rellena todo el espacio con las columnas que existen */
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+	/* Auto fill llena con más columnas (incluso vacías) si caben (tomando el tamaño mínimo) */
+	/* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
